@@ -51,9 +51,8 @@ def on_message(client, userdata, msg,  model, TOPIC_RESPONSE):
     present = detect_image(model, img)
     #present, image = annotate_image(model, img)
     
-    #image = cv2.resize(image, (640, 480))  # Change to desired size
-    
-    #cv2.imshow("Video Stream", image)
+    #img = cv2.resize(img, (640, 480))  # Change to desired size
+    #cv2.imshow("Video Stream", img)
     #cv2.waitKey(1)  # Prevents freezing
 
     response = "yes" if present else "no"

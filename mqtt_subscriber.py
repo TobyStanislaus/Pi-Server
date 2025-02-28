@@ -7,12 +7,12 @@ BROKER = "192.168.0.155"  # Change this to your MQTT broker's IP
 TOPIC = "run/script"
 
 # Path to your Python script
-SCRIPT_PATH = r"C:\Users\toby\OneDrive\Documents\Github\Pi Antics\image_processing.py"
+SCRIPT_PATH = r"C:\Users\toby\OneDrive\Documents\Github\Pi-Server\image_processing.py"
 
 def on_message(client, userdata, message):
     try:
         script = message.payload.decode("utf-8")  # Decode the message
-        print(f"Received request to run: {script}")
+        #print(f"Received request to run: {script}")
 
         # Ensure the correct script is being executed
         if script == "image_processing.py":
