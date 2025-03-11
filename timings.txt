@@ -1,4 +1,4 @@
-===== TIMING STATISTICS =====
+===== TIMING STATISTICS ===== No pulling trigger
 image_capture: avg=0.0425s, min=0.0050s, max=0.1696s, stdev=0.0170s (samples: 631)
 encoding: avg=0.0022s, min=0.0013s, max=0.0076s, stdev=0.0007s (samples: 631)
 mqtt_publish: avg=0.0003s, min=0.0002s, max=0.0009s, stdev=0.0002s (samples: 631)
@@ -7,7 +7,7 @@ response_latency: avg=0.0442s, min=0.0003s, max=0.1055s, stdev=0.0174s (samples:
 pull_switch: avg=1.0008s, min=1.0007s, max=1.0010s, stdev=0.0001s (samples: 9)
 =============================
 
-===== TIMING STATISTICS =====
+===== TIMING STATISTICS ===== pulling trigger
 image_capture: avg=0.0482s, min=0.0034s, max=0.2263s, stdev=0.0303s (samples: 298)
 encoding: avg=0.0024s, min=0.0012s, max=0.0076s, stdev=0.0007s (samples: 298)
 mqtt_publish: avg=0.0003s, min=0.0001s, max=0.0008s, stdev=0.0001s (samples: 298)
@@ -16,7 +16,7 @@ response_latency: avg=0.0439s, min=0.0002s, max=0.1026s, stdev=0.0143s (samples:
 pull_switch: avg=0.2010s, min=0.2005s, max=0.2027s, stdev=0.0007s (samples: 8)
 =============================
 
-===== TIMING STATISTICS =====
+===== TIMING STATISTICS ===== after speed adjustments
 image_capture: avg=0.0266s, min=0.0031s, max=0.2306s, stdev=0.0212s (samples: 370)
 encoding: avg=0.0009s, min=0.0004s, max=0.0067s, stdev=0.0004s (samples: 370)
 mqtt_publish: avg=0.0003s, min=0.0002s, max=0.0008s, stdev=0.0001s (samples: 370)
@@ -25,5 +25,13 @@ response_latency: avg=0.0381s, min=0.0003s, max=0.0892s, stdev=0.0164s (samples:
 pull_switch: avg=0.2008s, min=0.2007s, max=0.2011s, stdev=0.0002s (samples: 8)
 =============================
 
+===== TIMING STATISTICS ===== removing the time.sleep(0.05) between frames - interesting
+image_capture: avg=0.0960s, min=0.0433s, max=0.4518s, stdev=0.0433s (samples: 578)
+encoding: avg=0.0008s, min=0.0004s, max=0.0068s, stdev=0.0003s (samples: 578)
+mqtt_publish: avg=0.0003s, min=0.0002s, max=0.0023s, stdev=0.0001s (samples: 578)
+total_publish: avg=0.0971s, min=0.0439s, max=0.4588s, stdev=0.0434s (samples: 578)
+response_latency: avg=0.0429s, min=0.0007s, max=0.1172s, stdev=0.0167s (samples: 578)
+pull_switch: avg=0.2007s, min=0.2005s, max=0.2009s, stdev=0.0001s (samples: 7)
+=============================
 
 40second boot up time
