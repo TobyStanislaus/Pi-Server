@@ -52,8 +52,8 @@ def on_message(client, userdata, msg,  model, TOPIC_RESPONSE):
     #present, image = annotate_image(model, img)
     
     img = cv2.resize(img, (640, 480))  # Change to desired size
-    cv2.imshow("Video Stream", img)
-    cv2.waitKey(1)  # Prevents freezing
+    #cv2.imshow("Video Stream", img)
+    #cv2.waitKey(1)  # Prevents freezing
 
     response = "yes" if present else "no"
     client.publish(TOPIC_RESPONSE, response)
